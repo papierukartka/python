@@ -26,7 +26,7 @@ Repository containing lessons for PyLove Poznań workshop
  + 2018.03.27 - Zaawansowane konstrukty w Pythonie - Piotr Dyba
  - 2018.04.10 - Linux, Bash i SSH wprowadzenie - Filip Rachwalak
  - 2018.04.17 - Wyrażenie regularne - Zuzanna Kunik
- - 2018.04.24 - Deployment aplikacji webowej - Grzegorz Prokopczyk
+ + 2018.04.24 - Deployment aplikacji webowej - Grzegorz Prokopczyk
  - 2018.05.08 - Zaawansowane funkcje w Pythonie - TBD
  - 2018.05.15 - TBD - TBD
  - 2018.05.22 - Webapp security 101 - Krzysztof Marciniak
