@@ -1,0 +1,62 @@
+* Początek
+
+https://pylove.org/#/lessons/45
+https://labs.play-with-docker.com
+Docker - "Lzejsza maszyna wirtualna"
+ssh ip172-18-0-9-bcbc0m8knou000asvbe0@direct.labs.play-with-docker.com - mozliwosc wejscia przez ssh na kontener ze strony
+docker run hello-world
+    hello-world : nazwa gotowego image pobieranego z dockerhub
+docker run -it python
+docker run -it python:3.5 : sposob dodawania tagow do obrazow
+docker run -it python python --version : image komenda argument
+docker history python : komendy wytworzone do zbudowania obrazu
+
+
+* Dockerfile
+    FROM - podajemy obraz na ktorym chemy bazowac
+    RUN - uruchmiamy komende shellowa podczas budowania obrazy
+    COPY - kopiujemy lokalny plik do obrazu
+    CMD - uruchamiamy komende podczas uruchomienia obrazu
+
+docker build -t myimage .
+docker run -it myimage
+
+FROM ubuntu
+
+RUN apt update
+RUN apt install -y nginx
+RUN /etc/init.d/nginx start
+
+ADD script.sh /
+
+CMD [ "/bin/bash", "/script.sh" ]
+
+----
+* Udostępnianie:
+
+docker login
+    username
+    password
+docker tag myimage papierukartka/myimage
+docker push papierukartka/myimage
+
+* Docker daemon
+
+docker build -t mynginx -f dockerfile_nginx . : -f customowy_dockerfile_name
+
+* Komunikacja z zewnatrz
+
+docker run -p 80:80 -d mynginx
+
+* Docker compose
+
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: app_dockerfile
+    ports:
+     - "5000:5000"
+  redis:         //
+    image: redis // jednoznaczne z docker run redis
