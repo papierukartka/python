@@ -1,5 +1,5 @@
 ### pylove
-Repository containing lessons for PyLove Poznań workshop
+Repository containing few lessons for PyLove Poznań workshop and some python code
 
 ##### I semestr 14 spotkań od 17.10 do 12.12, od 09.01 do 13.02
 
