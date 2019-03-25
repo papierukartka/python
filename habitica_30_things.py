@@ -2,7 +2,9 @@ import requests
 import pyquery
 
 # Add complex todo in habitica
+# https://habitica.com/apidoc/#api-Task-AddChecklistItem
 
+# x-api-user & x-api-key can be aquired from https://habitica.com/user/settings/api
 x-api-user="PRIVATE"
 x-api-key="PRIVATE"
 
